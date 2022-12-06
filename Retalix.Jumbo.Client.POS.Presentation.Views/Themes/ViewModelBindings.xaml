@@ -1,0 +1,223 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:coreViewModels="clr-namespace:Retalix.Client.POS.Presentation.ViewModels.ViewModels;assembly=Retalix.Client.POS.Presentation.ViewModels"
+                    xmlns:views="clr-namespace:Retalix.Jumbo.Client.POS.Presentation.Views.Views"
+                    xmlns:viewModels="clr-namespace:Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels;assembly=Retalix.Jumbo.Client.POS.Presentation.ViewModels"
+                    xmlns:storeAccountViewModels="clr-namespace:Retalix.Jumbo.Client.POS.StoreAccount.ViewModels;assembly=Retalix.Jumbo.Client.POS.StoreAccount"
+                    xmlns:stampViewModels="clr-namespace:Retalix.Jumbo.Client.POS.Stamp.ViewModels;assembly=Retalix.Jumbo.Client.POS.Stamp"
+                    xmlns:stampViews="clr-namespace:Retalix.Jumbo.Client.POS.Stamp.Views;assembly=Retalix.Jumbo.Client.POS.Stamp"
+                    xmlns:storeAccountViews="clr-namespace:Retalix.Jumbo.Client.POS.StoreAccount.Views;assembly=Retalix.Jumbo.Client.POS.StoreAccount"
+                    xmlns:coreViews="clr-namespace:Retalix.Client.POS.Presentation.Views.Views;assembly=Retalix.Client.POS.Presentation.Views"
+                    xmlns:payByStampsModels="clr-namespace:Retalix.Jumbo.Client.POS.Stamp.ViewModels;assembly=Retalix.Jumbo.Client.POS.Stamp"
+                    xmlns:payByStampsViews="clr-namespace:Retalix.Jumbo.Client.POS.Stamp.Views;assembly=Retalix.Jumbo.Client.POS.Stamp"
+                    xmlns:BRM="clr-namespace:Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.BRM;assembly=Retalix.Jumbo.Client.POS.Presentation.ViewModels"
+                    xmlns:safePayViewModels="clr-namespace:Retalix.Jumbo.Client.POS.ATM.ViewModels;assembly=Retalix.Jumbo.Client.POS.ATM"
+                    xmlns:safePayViews="clr-namespace:Retalix.Jumbo.Client.POS.ATM.Views;assembly=Retalix.Jumbo.Client.POS.ATM">
+
+
+    <DataTemplate DataType="{x:Type viewModels:CashPaymentChangeExtendedViewModel}">
+        <views:CashPaymentChangeExtendedView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:EPSMessageViewModel}">
+        <views:EPSMessageView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:EPSRecoveryOptionsViewModel}">
+        <views:EPSRecoveryOptionsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type BRM:ZipCodeViewModel}">
+        <views:ZipCodeView />
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModels:EPSStartRecoveryViewModel}">
+        <views:EPSStartRecoveryView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:EPSReconciliationSuccessViewModel}">
+        <views:EPSReconciliationSuccessView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:EPSReconciliationFailureViewModel}">
+        <views:EPSReconciliationFailureView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:CashbackViewModel}">
+        <views:CashbackAmountView />
+    </DataTemplate>
+ 
+    <DataTemplate DataType="{x:Type viewModels:SearchCustomerByAddressViewModel}">
+        <views:SearchCustomerByAddressView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:SelectablePromotionViewModel}">
+        <views:SelectablePromotionView />
+    </DataTemplate>
+       
+    <DataTemplate DataType="{x:Type viewModels:JumboCustomerLookupSummaryViewModel}">
+        <views:JumboCustomerLookupSummaryView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type coreViewModels:ItemDetailsViewModel}">
+        <views:ItemDetailsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type coreViewModels:OriginalTransactionItemDetailsViewModel}">
+        <views:ItemDetailsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PaidInReferenceInputViewModel}">
+        <views:PaidInOutReferenceInputView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PaidOutReferenceInputViewModel}">
+        <views:PaidInOutReferenceInputView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type storeAccountViewModels:StoreAccountViewModel}">
+        <storeAccountViews:StoreAccountView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type stampViewModels:StampAddViewModel}">
+        <stampViews:StampAddView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type stampViewModels:StampExchangeViewModel}">
+        <stampViews:StampAddView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type stampViewModels:MultipleStampExchangeViewModel}">
+        <payByStampsViews:PayByStampsView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type payByStampsModels:PayByStampsViewModel}">
+        <payByStampsViews:PayByStampsView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:TicketIdentifiersExtendedViewModel}">
+        <coreViews:TicketIdentifiersView />
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModels:SwitchTenderViewModel}">
+        <coreViews:SwitchRefundTenderView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:EFTAmountViewModel}">
+        <views:EFTAmountView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type coreViewModels:PreEftGeneralWaitingViewModel}">
+        <views:PreEftGeneralWaitingView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type coreViewModels:TenderViewModel}">
+        <views:JumboTenderView />
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type coreViewModels:RefundTenderViewModel}">
+        <views:JumboTenderView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:ExtendedCustomerViewModel}">
+        <views:ExtendedCustomerView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:ExtendedEndOfDayExecutionViewModel}">
+        <coreViews:EndOfDayExecutionView />
+    </DataTemplate>
+		
+    <DataTemplate DataType="{x:Type viewModels:AgeRestrictionInputExtendedViewModel}">
+        <coreViews:CustomerAgeVerificationView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:AgeRestrictionWithNoDateInputExtendedViewModel}">
+        <coreViews:ConfirmationControlView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:AgeRestrictionWithReasonCodeInputExtendedViewModel}">
+        <coreViews:AgeRestrictionWithReasonCodeInputView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type safePayViewModels:CashExchangeViewModel}">
+        <safePayViews:CashExchangeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:ProcessedByAtmCashPaymentChangeExtendedViewModel}">
+        <views:CashPaymentChangeExtendedView/>
+    </DataTemplate>
+
+    
+    <DataTemplate DataType="{x:Type viewModels:CashChangerWarningInterventionListViewModel}">
+        <coreViews:InterventionListView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:OptionsSelectionMessageExtendedViewModel}">
+        <coreViews:OptionSelectionErrorView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PaidInWithChangeActionViewModel}">
+        <safePayViews:CashExchangeView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PaidInWithChangeReferenceInputViewModel}">
+        <views:PaidInOutReferenceInputView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PaidInWithChangeFinishViewModel}">
+        <views:PaidInWithChangeFinishView  />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PostTransactionByBarcodeViewModel}">
+        <views:PostTransactionByBarcodeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PostTransactionPosParametersSearchViewModel}">
+        <coreViews:ManualSearchTransactionParametersEntryView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PostTransactionSelectionViewModel}">
+        <views:PostTransactionSelectionView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PostTransactionOriginalTransactionViewModel}">
+        <views:PostTransactionOriginalTransactionView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:PostTransactionMessageViewModel}">
+        <views:PostTransactionMessageView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:AddCustomerExtendedViewModel}">
+        <coreViews:AddCustomerView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:RePrintTransactionManualEntryExtendedViewModel}">
+        <coreViews:ManualSearchTransactionParametersEntryView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:ItemNotFoundErrorConfigurableCommandsExtendedViewModel}">
+        <coreViews:ItemNotFoundConfigurableCommandsErrorView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:DispenseChangeExtendedViewModel}">
+        <coreViews:DispenseChangeView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:BuyingStampsPaymentViewModel}">
+        <views:BuyingStampsPaymentView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:BuyingStampsScanDigitalBarcodeViewModel}">
+        <views:BuyingStampsScanDigitalBarcodeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:BuyingStampsTenderExchangeViewModel}">
+        <views:BuyingStampsTenderExchangeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:TestExtendedLookupByAddressViewModel}">
+        <views:TestExtendedLookupByAddressView />
+    </DataTemplate>
+
+</ResourceDictionary>

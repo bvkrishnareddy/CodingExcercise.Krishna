@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns="http://retalix.com/R10/services" 
+		   targetNamespace="http://retalix.com/R10/services" 
+		   elementFormDefault="qualified" 
+		   attributeFormDefault="unqualified">
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/RetalixCommonHeader.xsd"/>
+	<xs:include schemaLocation="TestTouchPointConfiguration.xsd"/>
+	
+	<xs:element name="TestTouchPointConfigurationLookupRequest" type="TestTouchPointConfigurationLookupRequestType"/>
+	<xs:element name="TestTouchPointConfigurationLookupResponse" type="TestTouchPointConfigurationLookupResponseType"/>
+	
+	<xs:complexType name="TestTouchPointConfigurationLookupRequestType">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="SearchCriteria" type="SearchCriteriaType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SearchCriteriaType">
+		<xs:sequence>
+			<xs:element name="BusinessUnitId" type="xs:string"/>
+			<xs:element name="EntityType" type="xs:string"/>
+			<xs:element name="EntityParameter" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="TestTouchPointConfigurationLookupResponseType">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="TestTouchPointConfigurations" type="TestTouchPointConfigurationType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
